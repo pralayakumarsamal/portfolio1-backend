@@ -14,7 +14,9 @@ const saveContact = async (req, res) => {
       message,
     });
 
-    await contact.save(); 
+    const savedContact = await 
+    contact.save();
+    console.log(savedContact);
 
     const transporter = nodemailer.createTransport({
   host :"smtp.gmail.com",
