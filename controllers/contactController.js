@@ -44,7 +44,7 @@ await transporter.sendMail({
   } catch (error) {
     res.status(500).json({
       success: false,
-      message: "error.message",
+      message: error.message,
     });
   }
 };
