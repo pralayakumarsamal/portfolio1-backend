@@ -26,19 +26,18 @@ const saveContact = async (req, res) => {
   },
 });
 
-await transporter.sendMail({
-  from: process.env.EMAIL_USER,
-  to: process.env.EMAIL_USER,
-  subject: "New Portfolio Contact",
-  html:`
-   <h2>New Message</h2>
-    <p><b>Name:</b> ${name}</p>
-    <p><b>Email:</b> ${email}</p>
-    <p><b>Message:</b> ${message}</p>
-    `
-  ,
-    
-   });
+// await transporter.sendMail({
+//   from: process.env.EMAIL_USER,
+//   to: process.env.EMAIL_USER,
+//   subject: "New Portfolio Contact",
+//   html:`
+//    <h2>New Message</h2>
+//     <p><b>Name:</b> ${name}</p>
+//     <p><b>Email:</b> ${email}</p>
+//     <p><b>Message:</b> ${message}</p>
+//     `,
+   
+//    });
     
 
     res.status(201).json({
