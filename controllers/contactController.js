@@ -43,6 +43,7 @@ await transporter.sendMail({
       message: "Message saved successfully",
     });
   } catch (error) {
+    console.log("FULL ERROR:",error);
     res.status(500).json({
       success: false,
       message: error.message,
